@@ -15,11 +15,18 @@
     <jsp:body>
 
         <div>
-            <h2>Our Cool Site</h2>
+            <h2>BMI beregner</h2>
 
-            <div style="margin-top: 3em;margin-bottom: 3em;">
-                Main page for this 2. semester start project used at cphbusiness.dk
-            </div>
+            <form method="post" action="fc/bmiresult">
+                <label for="height">Højde i cm: </label>
+                <input id="height" name="height" type="text"/><br/>
+                <label for="weight">Vægt i kg: </label>
+                <input id="weight" name="weight" type="text"/><br/>
+                <button type="submit">Beregn BMI</button>
+            </form>
+
+                <a href="fc/bmiresult">Resultatside</a>
+
 
             <c:if test="${sessionScope.role == 'employee' }">
                 <p style="font-size: larger">This is what you can do,
