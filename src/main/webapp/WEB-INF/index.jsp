@@ -14,16 +14,38 @@
 
     <jsp:body>
 
-        <div>
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+
             <h2>BMI beregner</h2>
 
-            <form method="post" action="fc/bmiresult">
+            <form method="post" action="${pageContext.request.contextPath}/fc/bmiresult">
+                <div class="form-group">
                 <label for="height">Højde i cm: </label>
-                <input id="height" name="height" type="text"/><br/>
+                <input id="height" name="height" type="text" class="form-control"/>
+                </div>
+                <div class="form-group">
                 <label for="weight">Vægt i kg: </label>
-                <input id="weight" name="weight" type="text"/><br/>
-                <button type="submit">Beregn BMI</button>
+                <input id="weight" name="weight" type="text" class="form-control"/><br/>
+                </div>
+                <c:if test="${requestScope.error != null}">
+                    <p style="color:red";>
+                            ${requestScope.error}
+                    </p>
+                </c:if>
+                <button type="submit" class="btn btn-primary">Beregn BMI</button>
             </form>
+
+
+            </div>
+
+            <div class="col-sm-4"></div>
+        </div>
+
+
+
+        <div>
 
                 <a href="fc/bmiresult">Resultatside</a>
 
