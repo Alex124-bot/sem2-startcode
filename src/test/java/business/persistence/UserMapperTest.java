@@ -11,9 +11,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class UserMapperTest {
 
-    private final static String USER = "dev";
-    private final static String PASSWORD = "ax2";
-    private final static String URL = "jdbc:mysql://localhost:3306/startcode_test?serverTimezone=CET&useSSL=false";
+    private final static String USER = "root";
+    private final static String PASSWORD = "alex";
+    private final static String URL = "jdbc:mysql://localhost:3306/bmi_test?serverTimezone=CET&useSSL=false";
 
     private static Database database;
     private static UserMapper userMapper;

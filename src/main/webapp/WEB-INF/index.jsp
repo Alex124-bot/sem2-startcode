@@ -29,6 +29,31 @@
                 <label for="weight">Vægt i kg: </label>
                 <input id="weight" name="weight" type="text" class="form-control"/><br/>
                 </div>
+
+
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label><br>
+
+                <label for="sport">Din primære idræt:</label>
+
+                <select name="sport" id="sport">
+                    <option value="1">Fodbold</option>
+                    <option value="2">Gymnastik</option>
+                    <option value="3">Yoga</option>
+                    <option value="4">Badminton</option>
+                </select>
+
+                <br/>
+
+                <input type="checkbox" id="hobby1" name="hobby" value="Jeg går op i sund kost">
+                <label for="vehicle1"> Jeg går op i sund kost</label><br>
+                <input type="checkbox" id="hobby2" name="hobby" value="Jeg har et sommerhus">
+                <label for="vehicle2"> Jeg har et sommerhus</label><br>
+                <input type="checkbox" id="hobby3" name="hobby" value="Jeg har et kæledyr">
+                <label for="vehicle3"> Jeg har et kæledyr</label><br><br>
+
                 <c:if test="${requestScope.error != null}">
                     <p style="color:red";>
                             ${requestScope.error}
